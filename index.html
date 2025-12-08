@@ -1,113 +1,1289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITQAN DESIGN STUDIO - Interior Design Services</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f4f4f4; 
-            animation: fadeIn 1s ease-in; /* Page fade-in */
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        header { 
-            background-color: #333; 
-            color: white; 
-            text-align: center; 
-            padding: 20px; 
-            animation: slideDown 1s ease-out; /* Header slides down */
-        }
-        @keyframes slideDown {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        nav { 
-            background-color: #555; 
-            padding: 10px; 
-            text-align: center; 
-        }
-        nav a { 
-            color: white; 
-            margin: 0 15px; 
-            text-decoration: none; 
-            transition: transform 0.3s ease; /* Smooth hover effect */
-        }
-        nav a:hover { 
-            transform: scale(1.1); /* Links grow on hover */
-        }
-        section { 
-            padding: 20px; 
-            max-width: 800px; 
-            margin: auto; 
-            animation: fadeInUp 1s ease-out; /* Sections fade in from bottom */
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        img { 
-            transition: transform 0.3s ease; /* Images scale on hover */
-        }
-        img:hover { 
-            transform: scale(1.05); /* Slight zoom on hover */
-        }
-        footer { 
-            background-color: #333; 
-            color: white; 
-            text-align: center; 
-            padding: 10px; 
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>ITQAN DESIGN STUDIO — Interior Design Services in Ahmedabad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="ITQAN DESIGN STUDIO offers premium interior design services in Ahmedabad for homes and offices — from concept to execution."
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0c0d14;
+      --card: #11121b;
+      --accent: #f5c46a;
+      --accent-soft: rgba(245, 196, 106, 0.12);
+      --text: #f7f7fb;
+      --muted: #b0b3c3;
+      --border: #252739;
+      --error: #ff7675;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #181b29 0, #05060a 55%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 3rem 0;
+      }
+    }
+
+    /* Navbar */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+          120deg,
+          rgba(5, 6, 10, 0.96),
+          rgba(5, 6, 10, 0.9)
+        )
+        border-box;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 20% 20%, #f5c46a, #f08a5d, #904e95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #05060a;
+      box-shadow: 0 0 20px rgba(245, 196, 106, 0.65);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 16px;
+    }
+
+    .nav-cta {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 196, 106, 0.4);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: radial-gradient(circle at top left, #f5c46a22, transparent);
+    }
+
+    /* Mobile nav */
+
+    .nav-toggle {
+      display: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: var(--text);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        inset: 56px 1.25rem auto 1.25rem;
+        flex-direction: column;
+        padding: 0.75rem 0.9rem;
+        background: rgba(9, 10, 17, 0.96);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transform-origin: top;
+        transform: scaleY(0.6);
+        opacity: 0;
+        pointer-events: none;
+        gap: 0.8rem;
+        transition: opacity 0.16s ease, transform 0.16s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        transform: scaleY(1);
+        pointer-events: auto;
+      }
+
+      .nav-cta {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+    }
+
+    /* Hero */
+
+    #home {
+      padding-top: 3.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3.1vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 196, 106, 0.4);
+      background: rgba(245, 196, 106, 0.06);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5c46a, #f08a5d);
+      color: #05060a;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--accent);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #1b1f33, #090b12);
+      border-radius: 20px;
+      padding: 1.2rem 1.1rem;
+      border: 1px solid #26293e;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      font-size: 0.78rem;
+    }
+
+    .mini-card {
+      padding: 0.65rem;
+      border-radius: 14px;
+      background: rgba(8, 11, 22, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mini-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .mini-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .mini-pill {
+      position: absolute;
+      top: 0.55rem;
+      right: 0.7rem;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(245, 196, 106, 0.2);
+      color: var(--accent);
+    }
+
+    .hero-card-footer {
+      margin-top: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #2ecc71;
+      box-shadow: 0 0 10px rgba(46, 204, 113, 0.75);
+      margin-right: 0.35rem;
+      display: inline-block;
+    }
+
+    /* Sections */
+
+    .section-heading {
+      text-align: left;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-description {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 32rem;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.85rem;
+    }
+
+    .service-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .service-title {
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+    }
+
+    .service-glow {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(245, 196, 106, 0.24), transparent);
+      transform: translate(-50%, -50%);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    /* Portfolio */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, #131524, #070811);
+      border-radius: 18px;
+      padding: 0.85rem;
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-thumb {
+      border-radius: 14px;
+      height: 140px;
+      background: radial-gradient(circle at top, #f5c46a33, #121321);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .project-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .project-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* Process */
+
+    .process-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+      gap: 1.6rem;
+    }
+
+    @media (max-width: 900px) {
+      .process-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .process-highlight {
+      background: var(--accent-soft);
+      border-radius: 1rem;
+      padding: 0.9rem;
+      border: 1px dashed rgba(245, 196, 106, 0.5);
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 0.9rem;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(245, 196, 106, 0.5);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+      gap: 1.6rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.1rem;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    .contact-list {
+      margin-top: 0.4rem;
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    .contact-label {
+      font-weight: 500;
+      margin-right: 0.25rem;
+    }
+
+    .contact-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .form-input {
+      border-radius: 12px;
+      border: 1px solid #272a3b;
+      background: #070814;
+      padding: 0.5rem 0.7rem;
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+      font-size: 0.8rem;
+    }
+
+    .form-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(245, 196, 106, 0.25);
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    .form-actions {
+      margin-top: 0.6rem;
+    }
+
+    .btn-disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.3rem 0 1.6rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy span {
+      color: var(--accent);
+    }
+
+    /* Animations */
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay: 0.08s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.16s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.24s;
+    }
+
+    .delay-4 {
+      transition-delay: 0.32s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ITQAN DESIGN STUDIO</h1>
-        <p>Designs That Define Your Space., e.g., Transforming Spaces into Dreams]</p>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="home">
-        <h2>Welcome to ITQAN DESIGN STUDIO!</h2>
-        <p>We specialize in creating beautiful, functional interiors for homes and offices. With 2 years of experience, we bring your vision to life.</p>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Residential Interior Design</li>
-            <li>Commercial Space Planning</li>
-            <li>Furniture Selection and Customization</li>
-            <li>Color Consultation and Lighting Design</li>
-            <li>[Add any other services you offer]</li>
-        </ul>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Check out some of our recent projects:</p>
-        <!-- Add images here: <img src="your-image1.jpg" alt="Project 1" style="width:100%; max-width:300px;"> -->
-        <p>Every project starts with understanding your needs — space, lifestyle, and design preference.
-We plan, design, and build interiors that are functional, stylish, and long-lasting. From Modular Kitchens to Customized Cabinets, we make sure every detail fits perfectly into your space.
+  <!-- Navbar -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="brand-mark">ID</div>
+          <div class="brand-text">
+            <div class="brand-name">ITQAN DESIGN STUDIO</div>
+            <div class="brand-tagline">Designs That Define Your Space</div>
+          </div>
+        </div>
 
-Our process covers everything: measurement, design, material selection, fabrication, installation, and finishing — so you get a complete hassle-free experience.</p>
-        <!-- Repeat for more projects -->
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-cta">Book Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home">
+      <div class="container hero">
+        <div class="fade-in-up">
+          <div class="hero-eyebrow">Ahmedabad • Interior Design Studio</div>
+          <h1 class="hero-title">
+            Transforming
+            <span>everyday spaces</span>
+            into timeless interiors.
+          </h1>
+          <p class="hero-subtitle">
+            From compact homes to modern offices, we handle everything —
+            planning, 3D design, material selection and full execution —
+            so you get a smooth, stress-free interior experience.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">Residential</span>
+            <span class="badge">Commercial</span>
+            <span class="badge">Modular Solutions</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Book a Free Discussion
+            </a>
+            <a href="#portfolio" class="btn btn-outline">
+              View Sample Work
+            </a>
+          </div>
+
+          <p class="hero-note">
+            <strong>Note:</strong> We currently take projects across Ahmedabad.
+          </p>
+        </div>
+
+        <div class="hero-right fade-in-up delay-2">
+          <div class="hero-card">
+            <div class="hero-grid">
+              <div class="mini-card">
+                <div class="mini-label">Project Types</div>
+                <div class="mini-value">Homes & Offices</div>
+                <div class="mini-pill">End-to-End</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Key Areas</div>
+                <div class="mini-value">Living, Kitchen, Bedrooms</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Approach</div>
+                <div class="mini-value">Plan • Design • Build</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Location</div>
+                <div class="mini-value">Ahmedabad</div>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <div>
+                <span class="hero-status-dot"></span>
+                Accepting new projects
+              </div>
+              <div>Talk to us about your space →</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container fade-in-up delay-1">
+        <div class="section-heading">
+          <div class="section-eyebrow">Services</div>
+          <h2 class="section-title">What we can design for you</h2>
+          <p class="section-description">
+            We focus on clean, practical and long-lasting designs — whether you
+            need a complete makeover or just a smart, budget-friendly upgrade.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-glow"></div>
+            <div class="service-tag">Residential Interiors</div>
+            <h3 class="service-title">Full Home Design</h3>
+            <p>
+              Living room, bedrooms, kitchen, wardrobes and more — designed as
+              one connected style for your entire home.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Space Planning</span>
+              <span class="chip">Theme Selection</span>
+              <span class="chip">Furniture Layout</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Modular & Storage</div>
+            <h3 class="service-title">Kitchens & Cabinets</h3>
+            <p>
+              Practical and stylish modular kitchens, wardrobes and storage
+              units that fit your daily use and budget.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Modular Kitchen</span>
+              <span class="chip">Wardrobes</span>
+              <span class="chip">TV Units</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Workspaces</div>
+            <h3 class="service-title">Office & Commercial</h3>
+            <p>
+              Smart layouts that make offices, showrooms and studios feel
+              professional, comfortable and brand-aligned.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Workstations</span>
+              <span class="chip">Reception</span>
+              <span class="chip">Conference Areas</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Visuals</div>
+            <h3 class="service-title">Concept & 3D Views</h3>
+            <p>
+              Get a clear idea of your future space through mood boards and
+              3D-like visual references before execution.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Concept Boards</span>
+              <span class="chip">Reference Renders</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">On-Site Support</div>
+            <h3 class="service-title">Execution Guidance</h3>
+            <p>
+              Coordinating with carpenters and vendors, helping you choose
+              finishes, colours and lighting that work together.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Material Selection</span>
+              <span class="chip">Lighting Plan</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Custom</div>
+            <h3 class="service-title">Tailor-Made Requests</h3>
+            <p>
+              Have a specific requirement? Share it with us — we customize the
+              design plan as per your space and priority.
+            </p>
+            <div class="service-chip-row">
+              <span class="chip">Budget-First</span>
+              <span class="chip">Timeline Planning</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="container fade-in-up delay-1">
+        <div class="section-heading">
+          <div class="section-eyebrow">Portfolio</div>
+          <h2 class="section-title">Sample styles & spaces</h2>
+          <p class="section-description">
+            Here are a few types of interiors we can create. Real project
+            photos can be added as your portfolio grows.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project-card">
+            <div class="project-thumb">Warm Living Room Setup</div>
+            <div class="project-label">Residential</div>
+            <div class="project-title">Modern Family Living</div>
+            <div class="project-meta">
+              Neutral colours, layered lighting and storage-friendly TV unit.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">Functional Modular Kitchen</div>
+            <div class="project-label">Kitchen</div>
+            <div class="project-title">Straight + L-Shaped Layouts</div>
+            <div class="project-meta">
+              Counter space planning, tall units and easy workflow design.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">Bedroom with Storage</div>
+            <div class="project-label">Bedroom</div>
+            <div class="project-title">Calm & Clutter-Free</div>
+            <div class="project-meta">
+              Wardrobe, study corner and accent wall in one clean theme.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">Compact Office Cabin</div>
+            <div class="project-label">Office</div>
+            <div class="project-title">Smart Work Zones</div>
+            <div class="project-meta">
+              Efficient workstation layout with client seating and storage.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">Reception & Waiting Area</div>
+            <div class="project-label">Commercial</div>
+            <div class="project-title">First Impression Design</div>
+            <div class="project-meta">
+              Reception backdrop, seating and brand-aligned styling.
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">Custom Design Concept</div>
+            <div class="project-label">Concept</div>
+            <div class="project-title">Your Idea, Our Plan</div>
+            <div class="project-meta">
+              Share references from Pinterest/Instagram — we adapt them for
+              your actual space.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <div class="container fade-in-up delay-1">
+        <div class="section-heading">
+          <div class="section-eyebrow">Process</div>
+          <h2 class="section-title">How we work with you</h2>
+          <p class="section-description">
+            Clear steps so you always know what is happening with your project.
+          </p>
+        </div>
+
+        <div class="process-wrapper">
+          <div>
+            <p class="process-note">
+              Every home and office is different. We start by listening to your
+              needs — budget, style and timeline — and then build a plan that
+              fits you instead of forcing a template.
+            </p>
+            <div class="process-highlight">
+              <strong>Friendly, no-pressure discussion:</strong> You can first
+              talk to us, share photos/videos of your space on WhatsApp and
+              decide comfortably before starting any work.
+            </div>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-title">Understand & Measure</div>
+              <p>
+                We understand your requirement and, if needed, take basic
+                measurements or review your floor plan.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-title">Concept & Budget</div>
+              <p>
+                We suggest layout options, design ideas and an approximate
+                budget range as per your comfort.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-title">Design & Material</div>
+              <p>
+                Materials, colours and finishes are finalized; drawings or
+                visual references are shared for clarity.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-title">Execution Support</div>
+              <p>
+                Work begins with regular updates. Final checks and finishing are
+                done before handover.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: +91 9601490599 | Email: kaifkhan1087@gmail.com</p>
-        <p>Address: Sanklitnagar, Juhapura, Ahmedabad</p>
-        <p>Follow us on: [Add links to social media, e.g., Facebook, Instagram]</p>
+      <div class="container fade-in-up delay-1">
+        <div class="section-heading">
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="section-title">Let’s talk about your space</h2>
+          <p class="section-description">
+            You can call or WhatsApp us directly. We are based in Ahmedabad and
+            currently take projects within the city.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="font-size: 1rem; margin-bottom: 0.4rem;">Direct Contacts</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">1. Kaif Khan</span>
+                <a href="tel:+919601490599">+91 9601490599</a>
+                <span class="contact-tag">Call / WhatsApp</span>
+              </li>
+              <li>
+                <span class="contact-label">2. Saiyed Umar</span>
+                <a href="tel:+918401771663">+91 8401771663</a>
+                <span class="contact-tag">Call / WhatsApp</span>
+              </li>
+              <li>
+                <span class="contact-label">Email:</span>
+                <a href="mailto:kaifkhan1087@gmail.com">
+                  kaifkhan1087@gmail.com
+                </a>
+              </li>
+              <li>
+                <span class="contact-label">Location:</span>
+                Ahmedabad
+              </li>
+            </ul>
+
+            <p class="form-note" style="margin-top: 0.6rem;">
+              We currently
+              <strong>do not have official social media pages</strong>. Always
+              use the above numbers and email to contact us.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="font-size: 1rem; margin-bottom: 0.6rem;">Quick Enquiry Form</h3>
+            <form class="contact-form" onsubmit="event.preventDefault();">
+              <div class="form-field">
+                <label class="form-label" for="name">Name</label>
+                <input
+                  id="name"
+                  class="form-input"
+                  type="text"
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="phone">Phone</label>
+                <input
+                  id="phone"
+                  class="form-input"
+                  type="tel"
+                  placeholder="Your number"
+                />
+              </div>
+              <div class="form-field full">
+                <label class="form-label" for="details">
+                  Your requirement (short)
+                </label>
+                <textarea
+                  id="details"
+                  class="form-input"
+                  placeholder="Example: 2BHK full interior, office setup, kitchen upgrade, etc."
+                ></textarea>
+              </div>
+              <div class="form-actions full">
+                <button class="btn btn-primary btn-disabled" type="submit">
+                  Submit (Demo Only)
+                </button>
+                <div class="form-note">
+                  This is a sample form on static website. For faster response,
+                  please call or WhatsApp directly on the given numbers.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p>&copy; 2023 ITQAN DESIGN STUDIO. All rights reserved.</p>
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        © <span id="year"></span> ITQAN DESIGN STUDIO, Ahmedabad. All rights reserved.
+      </div>
+      <div>Designed for clarity • Built to grow with your portfolio.</div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      navToggle.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
+    });
+
+    // close nav on link click (mobile)
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove("open");
+          navToggle.textContent = "☰";
+        }
+      });
+    });
+
+    // scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    document
+      .querySelectorAll(".fade-in-up")
+      .forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
